@@ -23,15 +23,15 @@
 
   - RHACS 콘솔 접속 > Platform Configuration > Policy Management > Log4Shell: log4j Remote Code Execution vulnerability Policy 검색
 
-    ![00_policy](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\00_policy.png)
+    ![00_policy](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/00_policy.png)
     
   - Edit > Response method : Inform and enforce 선택 > Configure enforcement behavior : Deploy 활성화
 
-    ![04_log4j_policy_settings_rhacs_3.71](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\04_log4j_policy_settings_rhacs_3.71.png)
+    ![04_log4j_policy_settings_rhacs_3.71](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/04_log4j_policy_settings_rhacs_3.71.png)
 
 - Log4Shell Policy 활성화 확인
 
-  ![05_log4jshell_policy](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\05_log4jshell_policy.png)
+  ![05_log4jshell_policy](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/05_log4jshell_policy.png)
 
 ### 3. CI/CD Pipeline 구성
 
@@ -49,13 +49,13 @@ oc new-project log4j-test
 
   - Pipelines : Add pipeline Check
 
-    ![01_import_from_git](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\01_import_from_git.png)
+    ![01_import_from_git](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/01_import_from_git.png)
 
 ### 3.3) Pipeline 생성
 
 - 파이프라인 예시
 
-  ![02_cicd_pipeline](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\02_cicd_pipeline.png)
+  ![02_cicd_pipeline](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/02_cicd_pipeline.png)
 
 - Stackrox Tasks 추가
 
@@ -377,11 +377,11 @@ oc new-project log4j-test
 
 파이프라인을 수행하게 되면, 마지막 `image-check` 단계에서 파이프라인이 실패하는 것을 볼 수 있습니다.
 
-![06_pipeline_result](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\06_pipeline_result.png)
+![06_pipeline_result](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/06_pipeline_result.png)
 
 상세하게 로그를 확인해보면, 다음과 같이 `Log4Shell: log4j Remote Code  Execution vulnerability ` 관련 취약점 및 `Spring4Shell `  취약점 등이 검증된 것을 확인 할 수 있습니다.
 
-![07_rhacs_image_check](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\07_rhacs_image_check.png)
+![07_rhacs_image_check](https://github.com/justone0127/OpenShift-Log4j-CI-CD-Pipeline/blob/main/images/07_rhacs_image_check.png)
 
 이는 RHACS에서 취약점이 발견되면 배포가 되지 않도록 Policy를 적용했기 때문입니다.
 
