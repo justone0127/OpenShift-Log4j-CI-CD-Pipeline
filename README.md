@@ -21,11 +21,11 @@
 
 - Log4Shell: log4j Remote Code Execution vulnerability Policy 수정
 
-  - **RHACS 콘솔 접속 > Platform Configuration > Policy Management > Log4Shell: log4j Remote Code Execution vulnerability Policy 검색 **
+  - RHACS 콘솔 접속 > Platform Configuration > Policy Management > Log4Shell: log4j Remote Code Execution vulnerability Policy 검색
 
     ![00_policy](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\00_policy.png)
     
-  - **Edit > Response method : Inform and enforce 선택 > Configure enforcement behavior : Deploy 활성화**
+  - Edit > Response method : Inform and enforce 선택 > Configure enforcement behavior : Deploy 활성화
 
     ![04_log4j_policy_settings_rhacs_3.71](C:\Works\01_자료\01_OCP\05_OCP_Demo_hyou\OCP_4.10_CICD_RHACS_Log4J_Pipeline\04_log4j_policy_settings_rhacs_3.71.png)
 
